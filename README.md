@@ -9,7 +9,7 @@ Recursion
 Create a plain Ruby file. You'll be running it with irb or pry.
 
 ### So what is recursion?
-Recursion is another technique we can use to solve code problems. Recursion works well on a particular type of problem: a problem where you can solve **the easy part** of the problem, solve **the rest** of the problem (which is a smaller version of the original problem), and then **glue together** those solutions. This means that almost all recursive methods we write have a structure that looks something like this:
+Recursion is another technique we can use to solve code problems. Recursion works well on a particular type of problem: a problem where you can solve **the easy part** of the problem, solve **the rest** of the problem (which is a smaller version of the original problem), and then **glue together** those solutions. When we solve the "rest" of the problem, or the **recursive part**, we use the method we are *currently writing* to solve the rest of the problem. This means that almost all recursive methods we write have a structure that looks like this:
 
 ```rb
 def every_recursive_method_ever(input)
@@ -22,7 +22,9 @@ def every_recursive_method_ever(input)
 end
 ```
 
-We often use recursion on recursive data structures, because it's a natural fit; the rest of the data structure is a smaller version of the original data structure. Here's an example we've looked at before: the length of a LinkedList.
+> Aside: When writing algorithms-y code, especially with recursion, I tend to use explicit return statements, even though that's not "the ruby way." Explicit returns help me see exactly what's going on, and find all of my possible return statements more quickly. Write your code however you want; just know that this is an example of my personal preference.
+
+We often use recursion on recursive data structures, because it's a natural fit. Here's an example we've looked at before: the length of a LinkedList.
 
 ```rb
 def length(node)
@@ -61,7 +63,6 @@ Hooray! The same method, written with more lines of code!
 
 <details><summary>Now, try to modify your code so that it returns the total sum of the numbers in the list. Test it before you look at the solution.</summary>
 
-Solution:
 ```rb
 def sum(node)
   #base case
@@ -72,6 +73,32 @@ def sum(node)
 end
 ```
 </details>
+<br>
+While recursive data structures are a natural choice for using recursion, we can also use it for LOTS of other types of methods we need to write. Examples are in the [drills document](drills.md).
 
+### How to Write a Recursive Method
+1. Figure out how to break up the problem into the easy part and the recursive part.
+1. Figure out how to get the answer for the easy part.
+1. Figure out how to stick together your answers into the overall solution.
+1. Figure out your base case: at what point is the problem so small that you don't need to recurse anymore?
+1. Write your base case.
+1. Write your recursive case.
+1. test.
 
-While recursive data structures are a natural choice for using recursion, we can also use it for LOTS of other types of methods we need to write. Here are writeups of a few; lots more examples are in the [drills document](drills.md).
+### How to Debug a Recursive Method
+Recursive methods are particularly tricky to debug. If there's an issue in how you construct your answer, that problem will persist through every recursive call. You often want to test your base cases explicitly, and then the problem that is just a tiny bit bigger than your base case, until you identify at which stage the solution becomes incorrect. Use lots of printing to see what the values of your arguments are with each new recursive call, and make sure they line up with what you expect.
+
+## Walkthrough: So what is this recursion even DOING?
+
+Especially when getting started, recursion seems like insane magic. You call the method before you've finished writing it, hoping that it gives you back the right answer; then, you use that answer to build your actual solution.
+The way that I like to convince myself that recursion isn't magic is to trace through exactly what's happening in my code, and convince myself that from that base case, we're building up correctly and could handle any case. I'll show one example here, and you should feel free to use this technique to explore any recursive method you write.
+
+Let's go back to the tree `total_nodes` function that we've written before.
+<details><summary>Try re-writing that function yourself before looking at the solution here!</summary>
+```rb
+def total_nodes(node)
+  return 0 if node == null
+  return 1 + total_nodes(node.left) + total_nodes(node.right)
+end
+```
+</details>
