@@ -28,7 +28,7 @@ We often use recursion on recursive data structures, because it's a natural fit.
 
 ```rb
 def length(node)
-  return 0 if node == null
+  return 0 if node == nil
   return 1 + length(node.next)
 end
 ```
@@ -51,7 +51,7 @@ So if we write the `length` method to more clearly match our pattern, it might l
 ```rb
 def length(node)
   #base case
-  return 0 if node == null
+  return 0 if node == nil
   #recursive case
   easy_answer = 1 #the current node has 1 length
   recursive_answer = length(node.next) #the rest of the list
@@ -66,7 +66,7 @@ Hooray! The same method, written with more lines of code!
 ```rb
 def sum(node)
   #base case
-  return 0 if node == null
+  return 0 if node == nil
   #recursive case
   return node.value  +     sum(node.next)
   #      easy_part   glue  recursive_part
@@ -93,12 +93,12 @@ Recursive methods are particularly tricky to debug. If there's an issue in how y
 Especially when getting started, recursion seems like insane magic. You call the method before you've finished writing it, hoping that it gives you back the right answer; then, you use that answer to build your actual solution.
 The way that I like to convince myself that recursion isn't magic is to trace through exactly what's happening in my code, and convince myself that from that base case, we're building up correctly and could handle any case. I'll show one example here, and you should feel free to use this technique to explore any recursive method you write.
 
-Let's go back to the tree `total_nodes` function that we've written before.
+Let's go back to the `total_nodes` function for Trees that we've written before.
 <details><summary>Try re-writing that function yourself before looking at the solution here!</summary>
 
 ```rb
 def total_nodes(node)
-  return 0 if node == null
+  return 0 if node == nil
   return 1 + total_nodes(node.left) + total_nodes(node.right)
 end
 ```
