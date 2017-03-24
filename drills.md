@@ -2,6 +2,17 @@
 
 Solutions to these problems are included in the solutions branch. Please do not look at those solutions until you have at least attempted the problems.
 
+### Factorial
+Write a recursive method that calculates n!.
+e.g. 5! = 5*4*3*2*1 = 120
+```rb
+fact(0) => 1
+fact(1) => 1
+fact(2) => 2
+fact(3) => 6
+fact(4) => 24
+```
+
 ### Fibonacci
 Write a recursive method that calculates the nth [Fibonacci number](http://google.com/search?q=fibonacci%20number).
 ```rb
