@@ -95,6 +95,7 @@ The way that I like to convince myself that recursion isn't magic is to trace th
 
 Let's go back to the tree `total_nodes` function that we've written before.
 <details><summary>Try re-writing that function yourself before looking at the solution here!</summary>
+
 ```rb
 def total_nodes(node)
   return 0 if node == null
