@@ -89,3 +89,5 @@ change(10, [26])
 
 * https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/the-sierpinksi-gasket is about my favorite fractal that you can draw with recursion.
 * https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-1/ is another great intro-level explanation, and part 2 includes some applications to mazes.
+
+* http://codingbat.com/java/Recursion-1 has a bunch of problems that you can try solving using recursion. (Their site is about Java, but you can obviously write code to solve the problem in Ruby, and I'd be happy to talk about solutions to any of these.)
