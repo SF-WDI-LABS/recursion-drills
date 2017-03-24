@@ -104,6 +104,4 @@ end
 ```
 </details>
 
-I made this pretty slideshow to show what happens when we call this function on a TreeNode. Enjoy!
-
-<iframe src="https://docs.google.com/presentation/d/1JmYUC20Z2o1vo3ZxyyNQTv2Df1gTtFHmVi3jTar90ak/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+I made [this pretty slideshow](https://docs.google.com/presentation/d/1JmYUC20Z2o1vo3ZxyyNQTv2Df1gTtFHmVi3jTar90ak/pub?start=false&loop=false&delayms=60000) to show what happens when we call this function on a TreeNode. Enjoy!
