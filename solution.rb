@@ -1,3 +1,17 @@
+class LinkedListNode
+  attr_accessor :value, :next
+  # Using nxt because next is a keyword in ruby.
+  def initialize(value, nxt)
+    @value = value
+    @next = nxt
+  end
+end
+
+def length(node)
+  return 0 if node == nil
+  return 1 + length(node.next)
+end
+
 def change(cents, coins_arr)
   return 0 if coins_arr.empty? || cents < 0
   if coins_arr.length == 1
