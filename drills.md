@@ -23,6 +23,21 @@ fib(3) => 3
 fib(4) => 5
 ```
 
+### Palindrome
+Yay strings! Write a recursive method to figure out whether a string is a palindrome. (Don't reverse the string, sillyhead.)
+
+```rb
+pal("a") => true
+pal("aa") => true
+pal("abc") => false
+pal("racecar") => true
+pal("racecars") => false
+```
+
+<details><summary>Hint</summary>
+Figuring out your "easy part" and "recursive part" is trickier with this problem than with many others. The "easy part" needs to figure out one piece of whether the string is a palindrome, and then the recursion needs to deal with the rest of the string.
+</details>
+
 ### Printing Pyramids
 Write a recursive method that prints out a top-down pyramid with the given number of asterisks in the base.
 ```rb
@@ -59,7 +74,7 @@ change(5, [1,5]) => 2 # we could give back a nickel or 5 pennies to make 5 cents
 change(10, [1,5]) => 3 # we could give back 2 nickels, a nickel and 5 pennies, or 10 pennies
 change(99, [1,5,10,25]) => 213 # there are so many.
 ```
-<details><summary>Hint enclosed</summary>
+<details><summary>Hint</summary>
 You will likely need 2 base cases and 2 recursive cases to deal with this problem: one case as you have fewer and fewer coins to use, and one as you have fewer and fewer cents to make change for. Spend some time thinking about these examples, which I would say should all be handled by a base case:
 ```rb
 change(5, [5])
