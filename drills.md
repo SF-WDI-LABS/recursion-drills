@@ -84,3 +84,8 @@ change(-17, [1,2,3])
 change(10, [26])
 ```
 </details>
+
+### Other Cool Resources about recursion
+
+* https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/the-sierpinksi-gasket is about my favorite fractal that you can draw with recursion.
+* https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-1/ is another great intro-level explanation, and part 2 includes some applications to mazes.
