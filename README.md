@@ -86,6 +86,7 @@ end
 </details>
 
 <br>
+
 While recursive data structures are a natural choice for using recursion, we can also use it for LOTS of other types of methods we need to write. Examples are in the [drills document](drills.md).
 
 ### How to Write a Recursive Method
