@@ -68,7 +68,7 @@ def sum(node)
   return 0 if node == null
   #recursive case
   return node.value  +     sum(node.next)
-  #      easy        glue  recursive
+  #      easy_part   glue  recursive_part
 end
 ```
 </details>
