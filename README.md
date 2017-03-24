@@ -72,3 +72,6 @@ def sum(node)
 end
 ```
 </details>
+
+
+While recursive data structures are a natural choice for using recursion, we can also use it for LOTS of other types of methods we need to write. Here are writeups of a few; lots more examples are in the [drills document](drills.md).
